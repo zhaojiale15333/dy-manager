@@ -283,12 +283,11 @@ let data={
 
 export async function POST(req: any) {
   const params = await req.json()
-  data=JSON.parse(params)
+  data=params
   return NextResponse.json({ code: 200 })
 }
 
 export async function GET() {
-
   return NextResponse.json({ data })
 }
 

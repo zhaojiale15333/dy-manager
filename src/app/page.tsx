@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect } from 'react';
 import JSONInput from 'react-json-editor-ajrm';
-import locale    from 'react-json-editor-ajrm/locale/en';
+// import locale    from 'react-json-editor-ajrm/locale/en';
 
 export default function JsonEditor () {
 
@@ -27,7 +27,7 @@ export default function JsonEditor () {
       <JSONInput
         id          = 'a_unique_id'
         placeholder = { json }
-        locale      = { locale }
+        // locale      = { locale }
         height      = '100vh'
         width       = '100vw'
         onChange={handleEdit}

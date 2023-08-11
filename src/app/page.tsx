@@ -16,7 +16,7 @@ export default function JsonEditor () {
   }, [])
   const [json, setJson] = React.useState({});
 
-  function handleEdit (data) {
+  function handleEdit (data:any) {
     // 更新JSON数据
     setJson(data.jsObject);
     fetch(`/api/videos`, { method: 'POST', cache: "no-cache", body: JSON.stringify(data.jsObject) })

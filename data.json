@@ -1,11 +1,11 @@
 {
   "userInfo": {
     "school": {
-      "name": "中央戏剧学院1",
+      "name": "中央戏剧学院2",
       "department": null,
       "joinTime": null,
       "education": null,
-      "displayType": 0
+      "displayType": 1
     },
     "id": "93864497380",
     "unique_id_modify_time": "1630393144",

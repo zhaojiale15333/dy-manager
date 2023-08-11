@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect } from 'react';
-import ReactJson from 'react-json-view';
+import JSONInput from 'react-json-editor-ajrm';
+import locale    from 'react-json-editor-ajrm/locale/en';
 
 export default function JsonEditor () {
 
@@ -15,27 +16,22 @@ export default function JsonEditor () {
   }, [])
   const [json, setJson] = React.useState({});
 
-  function handleEdit (updatedJson) {
-    console.log('Edit:', updatedJson.updated_src);
+  function handleEdit (data) {
     // 更新JSON数据
-    setJson(updatedJson.updated_src);
-    fetch(`/api/videos`, { method: 'POST', cache: "no-cache", body: JSON.stringify(updatedJson.updated_src) })
+    setJson(data.jsObject);
+    fetch(`/api/videos`, { method: 'POST', cache: "no-cache", body: JSON.stringify(data.jsObject) })
   }
 
   return (
     <div>
-      <h1>抖音 Editor</h1>
-      <ReactJson
-        src={json}
-        onEdit={handleEdit}
-        onDelete={handleEdit}
-        onAdd={handleEdit}
-        displayDataTypes={false}
-        enableClipboard={false}
-        indentWidth={2}
-        name={null}
-        style={{ padding: '10px' }}
-      />
+      <JSONInput
+        id          = 'a_unique_id'
+        placeholder = { json }
+        locale      = { locale }
+        height      = '100vh'
+        width       = '100vw'
+        onChange={handleEdit}
+    />
     </div>
   );
 }

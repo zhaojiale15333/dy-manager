@@ -1,4 +1,4 @@
-// File: /Users/xm0525/Desktop/douyin-manage/src/app/layout.tsx
+// File: /Users/zhaojiale/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/b065ac55dfa93c168bb482c8fdccd19e/Message/MessageTemp/3cfd51035ae532f90f7e60bef55f8b76/File/douyin-manage/src/app/layout.tsx
 import * as entry from '../../../src/app/layout.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
